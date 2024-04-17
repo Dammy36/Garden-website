@@ -1,15 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 header {
   position: relative;
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(
-      to left,
+      to right,
       rgba(0, 128, 0, 0.589),
       rgba(0, 0, 0, 0.589)
     ),
@@ -17,6 +16,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 1;
 }
 
 /*.image {
@@ -28,9 +28,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 
   cursor: pointer;
+  color: #fff;
 }
 ul {
   list-style: none;
@@ -44,12 +46,48 @@ li {
   font-size: 0.8rem;
 }
 
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+.contact-card {
+  width: 10rem;
+  height: 13rem;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.137);
+  margin: 1rem;
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.contact-card-space {
+  padding: 1rem;
+  position: relative;
+}
+
 .hero {
   max-width: 50rem;
   margin: 1rem;
   text-transform: capitalize;
   position: absolute;
+  line-height: 1;
+  color: #fff;
+  box-sizing: border-box;
+  text-shadow: 0 5px 10px #0004;
 }
+.hero-text {
+  max-width: 35rem;
+  line-height: 1.5;
+}
+
 h1 {
   font-size: 6rem;
   font-weight: lighter;
@@ -65,6 +103,16 @@ h1 {
   padding: 0.5rem 1.2rem;
   cursor: pointer;
   color: black;
+  border: none;
+  font-weight: 500;
+}
+
+.button-link {
+  background-color: transparent;
+  border: 1px solid#fff;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
 }
 a {
   text-decoration: none;
@@ -78,15 +126,16 @@ a {
   position: absolute;
   top: 160px;
   right: 50px;
+  color: #fff;
 }
 .wide-card {
   right: 100px;
   bottom: 40px;
   position: absolute;
-
   width: 20rem;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.178);
+  background-color: rgba(255, 255, 255, 0.137);
+  color: #fff;
 }
 
 .wide-card-container {
@@ -98,4 +147,117 @@ a {
   justify-content: space-between;
   margin: 1rem;
   font-size: 20px;
+}
+.container {
+  margin: 5rem;
+  position: relative;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #000;
+}
+
+.section-image {
+  max-width: 100%;
+  object-fit: cover;
+}
+.grid {
+  display: grid;
+}
+
+.grid-1x2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.grid-1x3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section-content {
+  letter-spacing: 1.5;
+}
+.section-content-2 {
+  margin-top: 2rem;
+}
+h3 {
+  color: rgba(0, 128, 0, 0.61);
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.h3-p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h2 {
+  color: green;
+}
+
+.flower-vase {
+  width: 20rem;
+  height: 30rem;
+  object-fit: cover;
+}
+.block-text {
+  position: absolute;
+}
+
+@media (max-width: 960px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .collapsible-expander {
+    display: block;
+  }
+
+  .small-card,
+  .wide-card {
+    display: none;
+  }
+  .hero {
+    max-width: 35rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: lighter;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+  .hero-text {
+    max-width: 32rem;
+  }
+
+  .grid-1x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-1x3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-self: center;
+  }
+  .section-content {
+    text-align: center;
+  }
+
+  .flower-vase {
+    width: 100%;
+    height: auto;
+  }
 }
