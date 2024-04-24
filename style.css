@@ -43,8 +43,10 @@ li {
 
 a {
   position: relative;
-
   padding: 0 10px;
+}
+a:hover {
+  color: white;
 }
 
 a::after {
@@ -55,8 +57,9 @@ a::after {
   width: 0;
   left: 0;
   bottom: -10px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
+
 a:hover::after {
   width: 100%;
 }
@@ -259,6 +262,9 @@ h3 {
   width: 300px;
   height: 300px;
   border: 1px solid black;
+}
+.explore-menu-list img:hover {
+  transform: perspective(200px) translateZ(50px);
 }
 
 .color-1 {
