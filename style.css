@@ -18,6 +18,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
+  padding-bottom: 2rem;
 }
 
 nav {
@@ -41,15 +42,15 @@ li {
   font-size: 0.8rem;
 }
 
-a {
+nav a {
   position: relative;
   padding: 0 10px;
 }
-a:hover {
+nav a:hover {
   color: white;
 }
 
-a::after {
+nav a::after {
   content: "";
   position: absolute;
   background-color: white;
@@ -60,7 +61,7 @@ a::after {
   transition: 0.3s;
 }
 
-a:hover::after {
+nav a:hover::after {
   width: 100%;
 }
 
@@ -177,7 +178,7 @@ a {
 }
 
 article {
-  background-color: rgb(240, 241, 233);
+  background-color: rgba(0, 128, 0, 0.589);
 }
 
 .article__contents {
@@ -197,10 +198,14 @@ article {
 }
 
 .article-button:hover {
-  background-color: rgb(42, 77, 42);
+  background-color: rgb(86, 110, 86);
 }
 
 .article-img {
+  margin-bottom: 20px;
+}
+
+.article-img img {
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -208,7 +213,7 @@ article {
 
 .article-text {
   max-width: 400px;
-  color: rgb(102, 110, 102);
+  color: #fff;
   padding: 2rem;
 }
 
@@ -216,7 +221,7 @@ article {
   margin-top: 2rem;
 }
 
-.animate__animated {
+.article__contents h2 {
   padding: 2rem;
   font-size: 3rem;
   width: 500px;
@@ -224,7 +229,7 @@ article {
 }
 
 .h2-span {
-  color: rgb(161, 167, 161);
+  color: white;
   font-weight: 300;
 }
 
@@ -238,12 +243,6 @@ article {
   color: green;
 }
 
-.section-image {
-  width: 100%;
-  min-width: 80px;
-  cursor: pointer;
-  transition: 0.2s;
-}
 .grid {
   display: grid;
   margin-top: 50px;
@@ -258,9 +257,12 @@ article {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.section-content-image {
-  margin-top: 25px;
+.section-image {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
 }
+
 .section-content {
   letter-spacing: 1.5;
   margin-bottom: 50px;
@@ -278,18 +280,20 @@ article {
   color: rgb(128, 128, 128);
 }
 
-.explore-menu {
-  max-width: 60%;
-  columns: #808080;
-}
-.explore-menu h2 {
-  font-weight: 500;
-  font-size: 2rem;
-  color: green;
+.Explore-container {
+  width: 700px;
+  color: rgb(53, 69, 52);
+  margin-top: 5rem;
 }
 
-.explore-menu p {
+.Explore-container h2 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.Explore-container p {
   color: rgb(128, 128, 128);
+  width: 600px;
 }
 
 .explore-menu-list {
@@ -307,11 +311,10 @@ article {
 }
 
 .explore-menu-list img {
-  width: 80%;
+  max-width: 80%;
   margin: 10px;
   min-width: 80px;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 .explore-img {
@@ -349,6 +352,62 @@ article {
   position: absolute;
   bottom: 5px;
   right: 50px;
+}
+
+.testimonal {
+  background: hsl(130, 42%, 76%);
+  text-align: center;
+  padding: 1rem;
+  margin: 5rem;
+  line-height: 1.5;
+}
+
+.h5-textimonal {
+  padding-top: 2rem;
+}
+
+.testimonal-content {
+  margin: 1rem;
+  color: rgb(15, 15, 15);
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 2rem;
+  line-height: 2;
+}
+
+.testimonal__ {
+  color: #5e6a5d;
+  font-size: 1rem;
+}
+
+footer {
+  background-color: rgba(0, 128, 0, 0.589);
+  cursor: pointer;
+  color: white;
+  padding: 3rem;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer a {
+  display: block;
+}
+
+.footer-content {
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.footer-content:hover {
+  color: aquamarine;
+}
+
+.footer-content-links {
+  margin-left: 25px;
 }
 
 @media (max-width: 960px) {
@@ -414,10 +473,25 @@ article {
     justify-content: center;
   }
 
-  .animate__animated {
-    padding: 1rem;
+  .article__contents h2 {
+    padding: 0;
     text-align: center;
     margin-top: 1rem;
+  }
+
+  .article-text {
+    max-width: 300px;
+    padding: 1rem;
+  }
+
+  .article-content {
+    margin-top: 1rem;
+  }
+
+  .article__contents h2 {
+    padding: 0;
+    font-size: 2rem;
+    width: 300px;
   }
 
   .article-button {
@@ -435,9 +509,18 @@ article {
     flex-direction: column;
     gap: 25px;
   }
+  .explore-menu-list img {
+    max-width: 60%;
+    min-width: 0;
+  }
 
-  .explore-menu {
-    max-width: 100%;
+  .Explore-container {
+    width: 600px;
+    margin-left: -60px;
+  }
+
+  .Explore-container h2 {
+    font-size: 2.3rem;
   }
 }
 
