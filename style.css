@@ -177,8 +177,36 @@ a {
   font-size: 20px;
 }
 
+.container {
+  margin: 2rem;
+}
+
+.container-h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: green;
+}
+
+.grid {
+  display: grid;
+  margin-top: 50px;
+}
+
+.grid-1x2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.grid-1x3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 article {
   background-color: rgba(0, 128, 0, 0.589);
+}
+
+.containered {
+  margin: 3rem;
 }
 
 .article__contents {
@@ -211,12 +239,6 @@ article {
   object-fit: cover;
 }
 
-.article-text {
-  max-width: 400px;
-  color: #fff;
-  padding: 2rem;
-}
-
 .article-content {
   margin-top: 2rem;
 }
@@ -233,28 +255,15 @@ article {
   font-weight: 300;
 }
 
-.container {
-  margin: 3rem;
+.article-text h3 {
+  max-width: 800px;
+
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
-.container-h2 {
-  font-size: 3rem;
-  text-align: center;
-  color: green;
-}
-
-.grid {
-  display: grid;
-  margin-top: 50px;
-}
-
-.grid-1x2 {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.grid-1x3 {
-  grid-template-columns: repeat(3, 1fr);
+.article-text {
+  color: white;
 }
 
 .section-image {
@@ -282,18 +291,19 @@ article {
 
 .Explore-container {
   width: 700px;
-  color: rgb(53, 69, 52);
-  margin-top: 5rem;
+  color: rgb(54, 131, 48);
+  margin-top: 4rem;
 }
 
 .Explore-container h2 {
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .Explore-container p {
   color: rgb(128, 128, 128);
   width: 600px;
+  font-size: 1rem;
 }
 
 .explore-menu-list {
@@ -374,9 +384,12 @@ article {
   padding: 2rem;
   line-height: 2;
 }
+.span {
+  color: green;
+}
 
 .testimonal__ {
-  color: #5e6a5d;
+  color: green;
   font-size: 1rem;
 }
 
@@ -411,10 +424,6 @@ footer a {
 }
 
 @media (max-width: 960px) {
-  header {
-    height: 130vh;
-  }
-
   nav {
     display: none;
   }
@@ -446,7 +455,7 @@ footer a {
     font-weight: lighter;
   }
 
-  h2 {
+  .container-h2 {
     font-size: 2rem;
   }
 
@@ -468,59 +477,63 @@ footer a {
     grid-template-columns: 1fr;
   }
 
+  article {
+    margin-top: 50px;
+  }
+
+  .containered {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+  }
+
   .article__contents {
     flex-direction: column;
     justify-content: center;
   }
 
   .article__contents h2 {
-    padding: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    width: 500px;
     text-align: center;
-    margin-top: 1rem;
+  }
+
+  .article-button {
+    padding: 8px 15px;
+    margin: 1rem;
+  }
+
+  .article-img img {
+    width: 400px;
+    height: 400px;
   }
 
   .article-text {
-    max-width: 300px;
-    padding: 1rem;
+    padding: 2rem;
+    text-align: center;
   }
 
   .article-content {
     margin-top: 1rem;
   }
 
-  .article__contents h2 {
-    padding: 0;
-    font-size: 2rem;
-    width: 300px;
-  }
-
-  .article-button {
-    padding: 8px 15px;
-  }
-
-  .container {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-  }
-
   .explore-menu-list {
     margin-top: 2rem;
     flex-direction: column;
     gap: 25px;
+    text-align: center;
   }
+
   .explore-menu-list img {
     max-width: 60%;
     min-width: 0;
   }
 
-  .Explore-container {
-    width: 600px;
-    margin-left: -60px;
-  }
-
-  .Explore-container h2 {
-    font-size: 2.3rem;
+  .Explore-container,
+  .Explore-container p {
+    width: 400px;
+    text-align: center;
   }
 }
 
@@ -528,10 +541,58 @@ footer a {
   .hero {
     margin-top: 5rem;
   }
-}
 
-@media (max-width: 375px) {
-  .hero {
-    margin-top: 3rem;
+  .article__contents h2 {
+    padding: 1rem;
+    font-size: 1.6rem;
+    width: 350px;
+  }
+
+  .article-img img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .containered {
+    width: 70%;
+  }
+
+  .Explore-container {
+    width: 300px;
+  }
+  .Explore-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .Explore-container p {
+    width: 300px;
+    font-size: 1rem;
+  }
+
+  .testimonal {
+    padding: 1rem;
+    margin: 2rem;
+  }
+
+  .h5-textimonal {
+    padding-top: 1rem;
+  }
+
+  .testimonal-content {
+    margin: 0;
+
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .footer-block {
+    flex-direction: column;
+  }
+
+  @media (max-width: 375px) {
+    .hero {
+      margin-top: 3rem;
+    }
   }
 }
