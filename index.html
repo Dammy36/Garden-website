@@ -18,6 +18,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+
     <title>Garden</title>
   </head>
   <body>
@@ -83,7 +84,7 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/342/origina
           <i class="fa-solid fa-arrow-trend-up"></i>
         </div>
         <div class="wide-card-container">
-          <p>LIFEWOOD Garden</p>
+          <p class="hero-text">LIFEWOOD Garden</p>
           <p>
             we're passionate about transforming your outdoor spaces into
             thriving, vibrant gardens. With our dedication to sustainability and
@@ -102,8 +103,8 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/342/origina
         >
           SERVICES OFFERED
         </h2>
-        <div class="grid grid-1x2">
-          <div class="section-content-image">
+        <div class="grid grid-1x2 section-content-image">
+          <div class="">
             <img
               class="section-image"
               src="
@@ -113,7 +114,7 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/015/origina
           </div>
           <div class="section-content">
             <h3>Landscape design</h3>
-            <p class="h3-p">
+            <p>
               Landscape design is the art and practice of arranging outdoor
               spaces for aesthetic, functional, and environmental purposes. It
               involves the planning, design, and implementation of various
@@ -129,28 +130,10 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/015/origina
               information helps inform design decisions and ensures that the
               design is tailored to the specific site conditions.
             </p>
-
-            <p>
-              Sustainability and Environmental Considerations: Landscape
-              designers increasingly prioritize sustainability and environmental
-              stewardship in their designs, incorporating practices such as
-              water conservation, native plant selection, soil conservation,
-              rainwater harvesting, and use of environmentally friendly
-              materials and construction techniques.
-            </p>
-            <p>
-              Plant Selection and Placement: Plants are a fundamental element of
-              landscape design, and designers carefully select and place them to
-              achieve specific aesthetic and functional objectives. Factors such
-              as color, texture, form, size, and seasonal interest are
-              considered when choosing plants, and designers also take into
-              account factors such as sun and shade requirements, soil
-              conditions, and water needs.
-            </p>
           </div>
         </div>
 
-        <div class="grid grid-1x2">
+        <div class="grid grid-1x2 section-content-image">
           <div class="section-content">
             <h3>Garden installation</h3>
             <p>
@@ -168,25 +151,6 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/015/origina
               debris, removing existing vegetation or structures, grading the
               land to ensure proper drainage, and preparing the soil for
               planting.
-            </p>
-
-            <p>
-              Irrigation Installation: An essential aspect of garden
-              installation is ensuring that plants receive adequate water.
-              Depending on the size and complexity of the garden, an irrigation
-              system may be installed to automate the watering process. This may
-              include drip irrigation systems, sprinkler systems, or soaker
-              hoses, strategically placed to deliver water efficiently to the
-              plants while minimizing water waste.
-            </p>
-
-            <p>
-              Outdoor lighting can enhance the beauty and functionality of the
-              garden by extending its use into the evening hours and creating
-              ambiance. Lighting fixtures such as path lights, spotlights, and
-              accent lights may be installed to highlight key features of the
-              garden and provide illumination along pathways and gathering
-              areas.
             </p>
           </div>
           <div class="section-content-image">
@@ -208,7 +172,7 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/575/origina
         <button class="article-button">VIEW MORE</button>
       </div>
 
-      <div class="containered">
+      <div class="container">
         <div class="grid grid-1x3">
           <div class="article-img">
             <img
@@ -255,7 +219,7 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/576/origina
       </div>
     </article>
 
-    <section class="containered">
+    <section class="container">
       <div class="Explore-container" id="project">
         <h2>Explore Our Series Of Vase Flowers</h2>
         <p>
@@ -330,20 +294,23 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/890/origina
         </div>
       </div>
     </section>
-    <div class="testimonal">
-      <em class="h5-testimonal">Testimonial</em>
-      <p class="testimonal-content">
-        LifeWood's dedication to bring our <span class="span">vision</span>
+    <section class="testimonal">
+      <div class="testimonal-container">
+        <em class="h5-testimonal">Testimonial</em>
+        <p class="testimonal-content">
+          LifeWood's dedication to bring our <span class="span">vision</span>
 
-        to life was exceptional. They turned our
-        <span class="span">backyard</span> into a haven of tranquility. Their
-        attention to detail and sustainable practices on their design
-        <span class="span">impressed </span> us
-      </p>
+          to life was exceptional. They turned our
+          <span class="span">backyard</span> into a haven of tranquility. Their
+          attention to detail and sustainable practices on their design
+          <span class="span">impressed </span> us
+        </p>
 
-      <span class="testimonal__ span">STEVE EVANS</span>
-      <div>CEO of Media Company</div>
-    </div>
+        <span class="testimonal__ span">STEVE EVANS</span>
+        <div>CEO of Media Company</div>
+      </div>
+    </section>
+
     <footer>
       <div class="footer-block">
         <div class="footer-content">
@@ -373,14 +340,18 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/890/origina
           <a href="#" class="footer-content"> PUBLIC GARDEN</a>
         </div>
       </div>
-
-      <small
-        >Code with Love for sheCodes challenge
-        <a href="">open source</a>
-      </small>
     </footer>
-    ..
 
-    <script src="app.js"></script>
+    <script>
+      function webSite() {
+        let hambugerMenu = document.querySelector("#collapsible");
+        let contactCard = document.querySelector(".contact-card ");
+        hambugerMenu.addEventListener("click", () => {
+          contactCard.classList.toggle("collapsible-expander");
+        });
+      }
+
+      webSite();
+    </script>
   </body>
 </html>
